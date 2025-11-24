@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpfjipwmoybeq"]
+[gd_scene load_steps=3 format=3 uid="uid://cpfjipwmoybeq"]
 
 [ext_resource type="Script" uid="uid://cepoh75ar4a0a" path="res://screens/game_screen.gd" id="1_n72h8"]
+[ext_resource type="Script" uid="uid://du5onfkx8fwnl" path="res://screens/network_manager.gd" id="2_daj5d"]
 
 [node name="GameScreen" type="Node"]
 script = ExtResource("1_n72h8")
+
+[node name="NetworkManager" type="Node" parent="."]
+script = ExtResource("2_daj5d")
+
+[connection signal="received_message" from="NetworkManager" to="." method="_on_network_manager_received_message"]
