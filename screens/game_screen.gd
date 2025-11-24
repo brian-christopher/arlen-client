@@ -18,4 +18,11 @@ func _process(delta: float) -> void:
 
 
 func _on_network_manager_received_message(message: String) -> void:
-	pass # Replace with function body.
+	var packet = JSON.parse_string(message)
+	var opcode = int(packet.opcode)
+	
+	match opcode:
+		Enums.Opcode.SPAWN_CHARACTER_EVENT:
+			pass
+	
+	pass
