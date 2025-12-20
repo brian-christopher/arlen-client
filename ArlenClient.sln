@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArlenClient", "ArlenClient.csproj", "{BC97912A-EA0E-4A37-B1D9-798D81E965CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC97912A-EA0E-4A37-B1D9-798D81E965CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC97912A-EA0E-4A37-B1D9-798D81E965CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC97912A-EA0E-4A37-B1D9-798D81E965CC}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{BC97912A-EA0E-4A37-B1D9-798D81E965CC}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{BC97912A-EA0E-4A37-B1D9-798D81E965CC}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{BC97912A-EA0E-4A37-B1D9-798D81E965CC}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
