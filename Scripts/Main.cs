@@ -9,7 +9,10 @@ public partial class Main : Node
 	public override async void _Ready()
 	{ 
 		SessionManager.Instance.MessageReceived += OnMessageReceived;
-		SessionManager.Instance.ConnectToHost("127.0.0.1", 7666); 
+		SessionManager.Instance.ConnectToHost("127.0.0.1", 7666);
+
+		await ToSignal(GetTree().CreateTimer(1), SceneTreeTimer.SignalName.Timeout);
+		SessionManager.Instance.SendMessage("Hello World!");
 	}
 
 	private void OnMessageReceived(string data)
@@ -29,7 +32,14 @@ public partial class Main : Node
 
 	private void HandleSpawnCharacter(SpawnCharacterEvent data)
 	{
+		var character = ResourceLoader.Load<PackedScene>("res://Character.tscn")
+			.Instantiate<CharacterController>();
 		
+		character.GridPosition = new Vector2I(data.X, data.Y);
+		character.NetworkId = data.Id;
+		character.Position = new Vector2(data.X, data.Y) * 32.0f;
+		
+		AddChild(character);
 	}
 
 	private void HandleChangeMap(ChangeMapEvent data)

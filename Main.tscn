@@ -1,15 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqxblhx0yin4g"]
+[gd_scene load_steps=2 format=3 uid="uid://dqxblhx0yin4g"]
 
 [ext_resource type="Script" uid="uid://xrmbsuryk78p" path="res://Scripts/Main.cs" id="1_glv2v"]
-[ext_resource type="PackedScene" uid="uid://bvl55udi0mvie" path="res://Character.tscn" id="2_uu6xs"]
-[ext_resource type="Script" uid="uid://0pcliop7cux0" path="res://Scripts/CharacterController.cs" id="3_r0du0"]
-[ext_resource type="Texture2D" uid="uid://db3altt6re0n3" path="res://icon.svg" id="4_cm0pq"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_glv2v")
 
-[node name="Character" parent="." instance=ExtResource("2_uu6xs")]
-script = ExtResource("3_r0du0")
-
-[node name="Icon" type="Sprite2D" parent="Character"]
-texture = ExtResource("4_cm0pq")
+[node name="Camera2D" type="Camera2D" parent="."]

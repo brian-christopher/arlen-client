@@ -10,6 +10,7 @@ public partial class CharacterController : Node2D
     public bool IsWalking {get; set;}
     public Orientation Orientation { get; set; }
     public float Speed { get; set; } = 200.0f;
+    public int NetworkId { get; set; }
     
     public void MoveTo(Orientation orientation)
     {

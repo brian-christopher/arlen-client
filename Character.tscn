@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://bvl55udi0mvie"]
+[gd_scene load_steps=3 format=3 uid="uid://bvl55udi0mvie"]
+
+[ext_resource type="Script" uid="uid://0pcliop7cux0" path="res://Scripts/CharacterController.cs" id="1_oolk3"]
+[ext_resource type="Texture2D" uid="uid://db3altt6re0n3" path="res://icon.svg" id="2_7ig0a"]
 
 [node name="Character" type="Node2D"]
+script = ExtResource("1_oolk3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_7ig0a")
+centered = false
